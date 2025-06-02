@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - The Luxury Lounge</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .product-gallery {
+            margin-bottom: 30px;
+        }
+        
+        .product-gallery .main-image {
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .product-gallery .thumbnails {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .product-gallery .thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .product-gallery .thumbnail:hover {
+            border-color: #333;
+        }
+        
+        .product-info .price {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #333;
+            margin: 20px 0;
+        }
+        
+        .product-info .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+        
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .product-actions .btn {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .product-tabs {
+            margin: 50px 0;
+        }
+        
+        .product-tabs .nav-link {
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .product-tabs .nav-link.active {
+            font-weight: 600;
+            color: #007bff;
+        }
+        
+        .related-products .card {
+            border: none;
+            margin-bottom: 20px;
+        }
+        
+        .related-products .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .review-item {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .review-item:last-child {
+            border-bottom: none;
+        }
+        
+        .review-author {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .review-date {
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        .rating {
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/collections/logo-removebg-preview.png" alt="The Luxury Lounge" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex">
+                    <form class="d-flex me-2">
+                        <input class="form-control me-2" type="search" placeholder="Search">
+                        <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <img src="images/collections/product1 (2).jpg" alt="Luxury Armchair" class="img-fluid w-100" id="mainImage">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="product-info">
+                        <h1>Luxury Velvet Armchair</h1>
+                        <div class="rating mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="ms-2">(24 reviews)</span>
+                        </div>
+                        <div class="price">
+                            P5,443 <span class="old-price">P6,138</span>
+                        </div>
+
+                        <p>Elevate your living space with our premium velvet armchair, combining timeless elegance with modern comfort. Perfect for creating a sophisticated lounge area or as an accent piece in your bedroom.</p>
+                           
+                </div>
+            </div>
+            
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button" role="tab">Specifications</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab">Reviews (24)</button>
+                    </li>
+                </ul>
+                <div class="tab-content p-4 border border-top-0" id="productTabsContent">
+                    <div class="tab-pane fade show active" id="description" role="tabpanel">
+                        <h4>Product Description</h4>
+                        <p>The Luxury Velvet Armchair is a statement piece designed to bring elegance and comfort to any space. Featuring a solid hardwood frame with tapered legs, this armchair is upholstered in premium velvet fabric that's both luxurious and durable.</p>
+                        <p>The generous seat cushion is filled with high-density foam and fiber for optimal support, while the backrest offers just the right amount of give for comfortable lounging. The slightly reclined back and gently curved armrests create an inviting silhouette that complements both modern and traditional decor styles.</p>
+                        <p>Available in three rich color options, this armchair is perfect for creating a cozy reading nook, enhancing your living room seating, or adding a touch of sophistication to your bedroom.</p>
+                    </div>
+                    <div class="tab-pane fade" id="specs" role="tabpanel">
+                        <h4>Product Specifications</h4>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>Dimensions</th>
+                                    <td>Width: 75cm | Depth: 85cm | Height: 95cm | Seat Height: 45cm</td>
+                                </tr>
+                                <tr>
+                                    <th>Weight</th>
+                                    <td>25kg</td>
+                                </tr>
+                                <tr>
+                                    <th>Frame Material</th>
+                                    <td>Solid hardwood with reinforced joints</td>
+                                </tr>
+                                <tr>
+                                    <th>Upholstery</th>
+                                    <td>Premium velvet fabric (100% polyester)</td>
+                                </tr>
+                                <tr>
+                                    <th>Cushioning</th>
+                                    <td>High-density foam with fiber wrap</td>
+                                </tr>
+                                <tr>
+                                    <th>Legs</th>
+                                    <td>Solid wood with protective felt pads</td>
+                                </tr>
+                                <tr>
+                                    <th>Assembly</th>
+                                    <td>Required (legs attachment), tools included</td>
+                                </tr>
+                                <tr>
+                                    <th>Care Instructions</th>
+                                    <td>Spot clean with mild detergent, avoid direct sunlight</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+                        <h4>Customer Reviews</h4>
+                        <div class="review-item">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h5 class="review-author">Thato M.</h5>
+                            <p class="review-date">Reviewed on May 15 2025</p>
+                            <p>"Absolutely love this armchair! The velvet is so soft and luxurious, and the color is even more beautiful in person. It's become the favorite spot in my living room."</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></15, i>
+                            </div>
+                            <h5 class="review-author">Kabelo P.</h5>
+                            <p class="review-date">Reviewed on May 28, 2025</p>
+                            <p>"Very comfortable and stylish. Assembly was straightforward. Only minor complaint is that it's a bit heavy to move around, but that also speaks to its solid construction."</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h5 class="review-author">Amantle B.</h5>
+                            <p class="review-date">Reviewed on May 10, 2025</p>
+                            <p>"This armchair exceeded my expectations. The quality is exceptional for the price. It arrived well-packaged with no damage. Highly recommend!"</p>
+                        </div>
+                        <button class="btn btn-outline-primary mt-3" data-bs-toggle="modal" data-bs-target="#reviewModal">Write a Review</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+    <!-- Review Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewModalLabel">Write a Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="reviewName" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="reviewName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewRating" class="form-label">Rating</label>
+                            <select class="form-select" id="reviewRating" required>
+                                <option value="">Select rating</option>
+                                <option value="5">5 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="2">2 Stars</option>
+                                <option value="1">1 Star</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewText" class="form-label">Your Review</label>
+                            <textarea class="form-control" id="reviewText" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>The Luxury Lounge</h5>
+                    <p>Redefining modern sophistication with timeless elegance and contemporary functionality.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="shop.html" class="text-white">Shop</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact Us</h5>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Gaborone, Botswana</p>
+                        <p><i class="fas fa-phone me-2"></i> +267-78553706</p>
+                        <p><i class="fas fa-envelope me-2"></i> angellamokgosi@gmail.com</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 The Luxury Lounge. All rights reserved.</p>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -22,23 +22,22 @@ body {
 }
 
 .nav-link {
-    color: white !important;
+    color: white;
     font-weight: 500;
-    padding: 8px 15px !important;
+    padding: 8px 15px ;
 }
 
 .nav-link:hover {
-    color: #ddd !important;
+    color: #ddd ;
 }
 
 .nav-link.active {
     font-weight: bold;
-    color: #fff !important;
+    color: #fff;
 }
 
-/* Hero Carousel */
 .carousel {
-    margin-top: 56px; /* Account for fixed navbar */
+    margin-top: 56px; 
 }
 
 .carousel-item img {
@@ -52,7 +51,7 @@ body {
     padding: 20px;
 }
 
-/* Cards and Product Items */
+
 .card {
     border: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -80,23 +79,21 @@ section {
 }
 
 .bg-light {
-    background-color: #f9f9f9 !important;
+    background-color: #f9f9f9 ;
 }
 
 .bg-dark {
-    background-color: #343a40 !important;
+    background-color: #343a40 ;
 }
 
-/* Testimonials */
 .testimonials .card {
     border: 1px solid #eee;
 }
 
 .text-warning {
-    color: #ffc107 !important;
+    color: #ffc107 !;
 }
 
-/* Newsletter */
 .newsletter {
     background-color: #343a40;
     color: white;
@@ -110,7 +107,6 @@ section {
     height: 50px;
 }
 
-/* Footer */
 footer {
     background-color: #343a40;
     color: white;
@@ -146,11 +142,11 @@ footer ul li a:hover {
     color: white;
 }
 
-/* Contact Page Styles */
+
 .page-header {
     padding: 100px 0;
     background-color: #f8f9fa;
-    margin-top: 56px; /* Account for fixed navbar */
+    margin-top: 56px; 
 }
 
 .icon-box {
@@ -163,7 +159,7 @@ footer ul li a:hover {
     flex-shrink: 0;
 }
 
-/* Product Page */
+
 .product-detail img {
     max-width: 100%;
     height: auto;
@@ -177,7 +173,7 @@ footer ul li a:hover {
     margin-bottom: 10px;
 }
 
-/* Shop Page */
+
 .collection-images {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -205,7 +201,6 @@ footer ul li a:hover {
 }
 
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .carousel-item img {
         height: 50vh;
@@ -224,7 +219,7 @@ footer ul li a:hover {
     }
 }
 
-/* Utility Classes */
+
 .text-center {
     text-align: center;
 }
@@ -242,7 +237,7 @@ footer ul li a:hover {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
-/* Form Styles */
+
 .form-control {
     padding: 10px 15px;
     border-radius: 0;
@@ -272,7 +267,7 @@ footer ul li a:hover {
     border-width: 2px;
 }
 
-/* Search Form */
+
 .search-container {
     display: flex;
     align-items: center;
